@@ -24,9 +24,15 @@ namespace Pitcher.Tests
     }
 
     [Fact]
-    public void When_WithMessage_ConditionTrue_Throws()
+    public void When_ConditionFalse_DoesNotThrow()
     {
-      Assert.Throws<ArgumentNullException>("TEST", () => Throw.ArgumentNull.When(true, "TEST", "message"));
+      Throw.ArgumentNull.When(false, "TEST");
+    }
+
+    [Fact]
+    public void When_WithMessage_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentNull.When(false, "TEST", "message");
     }
 
     [Fact]
