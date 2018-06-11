@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFrameworks>net40;netstandard1.0;</TargetFrameworks>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Pitcher is helper library to simplify throwing exceptions and enable inlining of your methods because there are no throw statements blocking it.</Description>
+    <Copyright>© Alex Kamsteeg</Copyright>
+    <PackageProjectUrl>https://github.com/akamsteeg/Pitcher</PackageProjectUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <RepositoryUrl>https://github.com/akamsteeg/Pitcher.git</RepositoryUrl>
+    <PackageTags>exception throw helper</PackageTags>
+    <PackageLicenseUrl>https://github.com/akamsteeg/Pitcher/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
 </Project>
