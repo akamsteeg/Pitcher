@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>net40;netstandard1.0;</TargetFrameworks>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
