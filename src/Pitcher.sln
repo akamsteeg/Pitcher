@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitcher", "Pitcher\Pitcher.csproj", "{129F683E-8470-4E0D-9971-726F78B3A607}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitcher", "Pitcher\Pitcher.csproj", "{129F683E-8470-4E0D-9971-726F78B3A607}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitcher.Tests", "Pitcher.Tests\Pitcher.Tests.csproj", "{E11962C4-62A3-4187-B868-D04F0F14A7AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitcher.Tests", "Pitcher.Tests\Pitcher.Tests.csproj", "{E11962C4-62A3-4187-B868-D04F0F14A7AB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pitcher.Sources", "Pitcher.Sources", "{0C8FFA70-E73C-4767-B08E-EFE55098FB40}"
+	ProjectSection(SolutionItems) = preProject
+		Pitcher.Sources\buildpackage.ps1 = Pitcher.Sources\buildpackage.ps1
+		Pitcher.Sources\Pitcher.Sources.nuspec = Pitcher.Sources\Pitcher.Sources.nuspec
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{129F683E-8470-4E0D-9971-726F78B3A607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -44,5 +47,11 @@ Global
 		{E11962C4-62A3-4187-B868-D04F0F14A7AB}.Release|x64.Build.0 = Release|Any CPU
 		{E11962C4-62A3-4187-B868-D04F0F14A7AB}.Release|x86.ActiveCfg = Release|Any CPU
 		{E11962C4-62A3-4187-B868-D04F0F14A7AB}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF9AFFC7-2413-43BA-A3A7-CD6F08484668}
 	EndGlobalSection
 EndGlobal
