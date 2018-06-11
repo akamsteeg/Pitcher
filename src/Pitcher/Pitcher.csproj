@@ -6,6 +6,7 @@
     
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>True</IncludeSymbols>
     <Description>Pitcher is helper library to simplify throwing exceptions and enable inlining of your methods because there are no throw statements blocking it.</Description>
     <Copyright>© Alex Kamsteeg</Copyright>
     <PackageProjectUrl>https://github.com/akamsteeg/Pitcher</PackageProjectUrl>
