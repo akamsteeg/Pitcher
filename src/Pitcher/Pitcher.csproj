@@ -16,6 +16,8 @@
     <PackageLicenseUrl>https://github.com/akamsteeg/Pitcher/blob/master/LICENSE</PackageLicenseUrl>
 
     <DocumentationFile>docs\Pitcher.xml</DocumentationFile>
+
+    <Authors>Alex Kamsteeg</Authors>
   </PropertyGroup>
 
 </Project>
