@@ -30,49 +30,15 @@ namespace Pitcher.Tests
     }
 
     [Fact]
+    public void When_WithMessage_ConditionTrue_Throws()
+    {
+      Assert.Throws<ArgumentNullException>("TEST", () => Throw.ArgumentNull.When(true, "TEST", "message"));
+    }
+
+    [Fact]
     public void When_WithMessage_ConditionFalse_DoesNotThrow()
     {
       Throw.ArgumentNull.When(false, "TEST", "message");
-    }
-
-    [Fact]
-    public void When_FuncNull_ThrowsExceptionForWhenParameter()
-    {
-      Assert.Throws<ArgumentNullException>("condition", () => Throw.ArgumentNull.When(null, "TEST"));
-    }
-
-    [Fact]
-    public void When_FuncReturnsTrue_Throws()
-    {
-      Assert.Throws<ArgumentNullException>("TEST", () =>
-        Throw.ArgumentNull.When(() => true, "TEST")
-      );
-    }
-
-    [Fact]
-    public void When_FuncReturnsFalse_DoesNotThrow()
-    {
-      Throw.ArgumentNull.When(() => false, "TEST");
-    }
-
-    [Fact]
-    public void When_WithMessage_FuncNull_ThrowsExceptionForWhenParameter()
-    {
-      Assert.Throws<ArgumentNullException>("condition", () => Throw.ArgumentNull.When(null, "TEST", "message"));
-    }
-
-    [Fact]
-    public void When_WithMessage_FuncReturnsTrue_Throws()
-    {
-      Assert.Throws<ArgumentNullException>("TEST", () =>
-        Throw.ArgumentNull.When(() => true, "TEST", "message")
-      );
-    }
-
-    [Fact]
-    public void When_WithMessage_FuncReturnsFalse_DoesNotThrow()
-    {
-      Throw.ArgumentNull.When(() => false, "TEST", "message");
     }
 
     [Fact]

@@ -81,56 +81,6 @@ namespace Pitcher
 
       /// <summary>
       /// Throw an <see cref="ArgumentNullException"/> for the specified
-      /// parameter name when the specified <see cref="Func{TResult}"/> returns true
-      /// </summary>
-      /// <param name="condition">
-      /// The <see cref="Func{TResult}"/> to determine whether to throw the <see cref="ArgumentNullException"/> or not
-      /// </param>
-      /// <param name="parameterName">
-      /// The name of the parameter to throw the <see
-      /// cref="ArgumentNullException"/> for
-      /// </param>
-      public static void When(Func<bool> condition, string parameterName)
-      {
-        _ = condition ?? throw new ArgumentNullException(nameof(condition));
-
-        var mustThrow = condition.Invoke();
-
-        if (mustThrow)
-        {
-          throw new ArgumentNullException(parameterName);
-        }
-      }
-
-      /// <summary>
-      /// Throw an <see cref="ArgumentNullException"/> for the specified
-      /// parameter name when the specified <see cref="Func{TResult}"/> returns true
-      /// </summary>
-      /// <param name="condition">
-      /// The <see cref="Func{TResult}"/> to determine whether to throw the <see
-      /// cref="ArgumentNullException"/> or not
-      /// </param>
-      /// <param name="parameterName">
-      /// The name of the parameter to throw the <see
-      /// cref="ArgumentNullException"/> for
-      /// </param>
-      /// <param name="message">
-      /// The message to include in the <see cref="ArgumentNullException"/>
-      /// </param>
-      public static void When(Func<bool> condition, string parameterName, string message)
-      {
-        _ = condition ?? throw new ArgumentNullException(nameof(condition));
-
-        var mustThrow = condition.Invoke();
-
-        if (mustThrow)
-        {
-          throw new ArgumentNullException(parameterName, message);
-        }
-      }
-
-      /// <summary>
-      /// Throw an <see cref="ArgumentNullException"/> for the specified
       /// parameter when the specified <see cref="object"/> is null
       /// </summary>
       /// <param name="obj">
