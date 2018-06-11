@@ -10,6 +10,7 @@
     <description>Pitcher is helper library to simplify throwing exceptions and enable inlining of your methods because there are no throw statements blocking it.</description>
     <language>en-US</language>
     <tags>exception throw helper</tags>
+	<developmentDependency>true</developmentDependency>
   </metadata>
   <files>
         <file src=".\Throw.cs.pp" target="content\Helpers\Throw.cs.pp" />
