@@ -7,7 +7,7 @@
     <licenseUrl>https://github.com/akamsteeg/Pitcher/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/akamsteeg/Pitcher</projectUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>Pitcher is helper library to simplify throwing exceptions and enable inlining of your methods because there are no throw statements blocking it.</description>
+    <description>Pitcher.Sources is helper library to simplify throwing exceptions and enable inlining of your methods because there are no throw statements blocking it. It's a source package for Pitcher, directly adding the code to your library or application without introducing another dependency.</description>
     <language>en-US</language>
     <tags>exception throw helper</tags>
 	<developmentDependency>true</developmentDependency>
