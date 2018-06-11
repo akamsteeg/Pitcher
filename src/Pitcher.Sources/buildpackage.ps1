@@ -4,7 +4,12 @@ param([String]$nuGetExePath='d:\Devtools\nuget.exe')
 Copy-Item ..\Pitcher\Throw.cs .\Throw.cs.pp
 
 # Replace namespace
-(Get-Content .\Throw.cs.pp).replace('namespace Pitcher', 'namespace $rootnamespace$.Helpers') | Set-Content .\Throw.cs.pp
+$newNamespaceWithWarning = @'
+// THIS IS A SOURCE FILE FROM THE PITCHER.SOURCES PACKAGE. DO NOT EDIT
+namespace $rootnamespace$.Helpers
+'@
+
+(Get-Content .\Throw.cs.pp).replace('namespace Pitcher', $newNamespaceWithWarning) | Set-Content .\Throw.cs.pp
 # Make Throw class internal
 (Get-Content .\Throw.cs.pp).replace('public static class Throw', 'internal static class Throw') | Set-Content .\Throw.cs.pp
 
