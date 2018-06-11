@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Pitcher.Sources</id>
+    <version>1.0.0</version>
+    <authors>Alex Kamsteeg</authors>
+    <licenseUrl>https://github.com/akamsteeg/Pitcher/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/akamsteeg/Pitcher</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Pitcher is helper library to simplify throwing exceptions and enable inlining of your methods because there are no throw statements blocking it.</description>
+    <language>en-US</language>
+    <tags>exception throw helper</tags>
+  </metadata>
+  <files>
+        <file src=".\Throw.cs.pp" target="content\Helpers\Throw.cs.pp" />
+  </files>
+</package>
