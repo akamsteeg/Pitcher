@@ -82,8 +82,13 @@ namespace Pitcher
       /// The name of the parameter to throw the <see
       /// cref="ArgumentNullException"/> for
       /// </param>
-      public static void When(bool condition, string parameterName) =>
-        Throw.When(condition, new ArgumentNullException(parameterName));
+      public static void When(bool condition, string parameterName)
+      {
+        if (condition)
+        {
+          Throw.This(new ArgumentNullException(parameterName));
+        }
+      }
 
       /// <summary>
       /// Throw an <see cref="ArgumentNullException"/> for the specified
@@ -100,8 +105,13 @@ namespace Pitcher
       /// <param name="message">
       /// The message to include in the <see cref="ArgumentNullException"/>
       /// </param>
-      public static void When(bool condition, string parameterName, string message) =>
-        Throw.When(condition, new ArgumentNullException(parameterName, message));
+      public static void When(bool condition, string parameterName, string message)
+      {
+        if (condition)
+        {
+          Throw.This(new ArgumentNullException(parameterName, message));
+        }
+      }
 
       /// <summary>
       /// Throw an <see cref="ArgumentNullException"/> for the specified
@@ -115,7 +125,7 @@ namespace Pitcher
       /// cref="ArgumentNullException"/> for
       /// </param>
       public static void WhenNull(object obj, string parameterName) =>
-        Throw.When(obj == null, new ArgumentNullException(parameterName));
+        Throw.ArgumentNull.When(obj == null, parameterName);
 
       /// <summary>
       /// Throw an <see cref="ArgumentNullException"/> for the specified
@@ -132,7 +142,7 @@ namespace Pitcher
       /// The message to include in the <see cref="ArgumentNullException"/>
       /// </param>
       public static void WhenNull(object obj, string parameterName, string message) =>
-        Throw.When(obj == null, new ArgumentNullException(parameterName, message));
+        Throw.ArgumentNull.When(obj == null, parameterName, message);
     }
 
     /// <summary>
@@ -176,8 +186,13 @@ namespace Pitcher
       /// The name of the parameter to throw the <see
       /// cref="ArgumentOutOfRangeException"/> for
       /// </param>
-      public static void When(bool condition, string parameterName) =>
-        Throw.When(condition, new ArgumentOutOfRangeException(parameterName));
+      public static void When(bool condition, string parameterName)
+      {
+        if (condition)
+        {
+          Throw.This(new ArgumentOutOfRangeException(parameterName));
+        }
+      }
 
       /// <summary>
       /// Throw an <see cref="ArgumentOutOfRangeException"/> for the specified
@@ -194,8 +209,13 @@ namespace Pitcher
       /// <param name="message">
       /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
       /// </param>
-      public static void When(bool condition, string parameterName, string message) =>
-        Throw.When(condition, new ArgumentOutOfRangeException(parameterName, message));
+      public static void When(bool condition, string parameterName, string message)
+      {
+        if (condition)
+        {
+          Throw.This(new ArgumentOutOfRangeException(parameterName, message));
+        }
+      }
     }
   }
 }
