@@ -4,7 +4,7 @@
     <TargetFrameworks>net40;netstandard1.0;</TargetFrameworks>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
 
-    <Version>1.0.0-beta2</Version>
+    <Version>1.0.0-beta3</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
