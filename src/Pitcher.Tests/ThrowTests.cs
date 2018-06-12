@@ -28,5 +28,11 @@ namespace Pitcher.Tests
     {
       Throw.When(false, new Exception());
     }
+
+    [Fact]
+    public void When_WithNullException_ThrowsArgumentNullException()
+    {
+      Assert.Throws<ArgumentNullException>("exceptionToThrow", () => Throw.When(true, null));
+    }
   }
 }
