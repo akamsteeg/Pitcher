@@ -36,7 +36,9 @@ To use Pitcher, add a using to your source file:
 using Pitcher;
 ```
 
-Then, you can use `Throw` to throw exceptions.
+Then, you can use `Throw` or `Throw<T>` to throw exceptions.
+
+### Throw
 
 Throw an exception directly:
 ```csharp
@@ -48,7 +50,7 @@ Throw an exception based on a condition:
 Throw.When(args == null, new ArgumentNullException(nameof(args)); // This will always allocate the exception
 ```
 
-### ArgumentNullException
+#### ArgumentNullException
 
 There are helpers for simplifying argument checking and throwing an `ArgumentNullException`.
 
@@ -72,7 +74,7 @@ Throw.ArgumentNull.WhenNull(args, nameof(args));
 Throw.ArgumentNull.WhenNull(args, nameof(args), "Args is a required parameter");
 ```
 
-### ArgumentOutOfRangeException
+#### ArgumentOutOfRangeException
 
 Specific helpers are available for throwing an `ArgumentOutOfRangeException`.
 
@@ -89,6 +91,18 @@ Throw.ArgumentOutOfRange.When(args < 0, nameof(args));
 // Throw ArgumentOutOfRangeException for parameter with a message, when a condition is met
 Throw.ArgumentOutOfRange.When(args < 0, nameof(args), "Args is out of the acceptable range");
 
+```
+
+### Throw&lt;T&gt;
+
+For exceptions without parameters or when you don't care about the parameters, you can use `Throw<T>`.
+
+```csharp
+// Throw an exception
+Throw<InvalidOperationException>.Now();
+
+//Throw an exception based on a condition
+Throw<InvalidOperationException>.When(obj == null);
 ```
 
 ## License
