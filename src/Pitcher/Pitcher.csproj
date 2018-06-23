@@ -4,11 +4,11 @@
     <TargetFrameworks>net40;netstandard1.0;</TargetFrameworks>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
 
-    <Version>1.0.0-beta4</Version>
+    <Version>1.0.0</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
-    <Description>Pitcher is helper library to simplify throwing exceptions and enable inlining of your methods because there are no throw statements blocking it.</Description>
+    <Description>Pitcher is helper library to simplify throwing exceptions and make methods easier to inline by reducing code size.</Description>
     <Copyright>© Alex Kamsteeg</Copyright>
     <Authors>Alex Kamsteeg (https://atlex.nl/)</Authors>
     <Company />

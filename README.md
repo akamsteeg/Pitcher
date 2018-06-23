@@ -1,6 +1,6 @@
 # Pitcher
 
-Pitcher is a utility library to simplify throwing exceptions, especially when checking arguments. It's also usable to move `throw` statements out of methods, since they block inlining.
+Pitcher is a utility library to simplify throwing exceptions, especially when checking arguments. It makes methods easier to inline, by reducing code size.
 
 Supported frameworks:
 
@@ -15,7 +15,7 @@ Supported frameworks:
 The Pitcher NuGet package is the prefered way to install and use it.
 
 ```powershell
-install-package Pitcher -pre
+install-package Pitcher
 ```
 
 ### Pitcher.Sources
