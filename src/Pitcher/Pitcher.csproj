@@ -4,7 +4,7 @@
     <TargetFrameworks>net40;netstandard1.0;</TargetFrameworks>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
 
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeSymbols>True</IncludeSymbols>
@@ -16,8 +16,14 @@
     <RepositoryUrl>https://github.com/akamsteeg/Pitcher.git</RepositoryUrl>
     <PackageTags>exception throw helper</PackageTags>
     <PackageLicenseUrl>https://github.com/akamsteeg/Pitcher/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageReleaseNotes>
+      1.1.0:
+      -[Fix] Removed expensive null check on arguments in Throw.This() and Throw.When()
+    </PackageReleaseNotes>
 
     <DocumentationFile>docs\Pitcher.xml</DocumentationFile>
+
+    
   </PropertyGroup>
 
   <ItemGroup>
