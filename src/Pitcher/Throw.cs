@@ -63,8 +63,6 @@ namespace Pitcher
     /// </param>
     public static void This(Exception exceptionToThrow)
     {
-      _ = exceptionToThrow ?? throw new ArgumentNullException(nameof(exceptionToThrow));
-
       throw exceptionToThrow;
     }
 
@@ -81,8 +79,6 @@ namespace Pitcher
     /// </param>
     public static void When(bool condition, Exception exceptionToThrow)
     {
-      _ = exceptionToThrow ?? throw new ArgumentNullException(nameof(exceptionToThrow));
-
       if (condition)
       {
         throw exceptionToThrow;
