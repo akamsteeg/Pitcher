@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Pitcher.Sources</id>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <authors>Alex Kamsteeg</authors>
     <licenseUrl>https://github.com/akamsteeg/Pitcher/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/akamsteeg/Pitcher</projectUrl>
@@ -10,7 +10,11 @@
     <description>Pitcher.Sources is helper library to simplify throwing exceptions and make methods easier to inline by reducing code size. It's a source package for Pitcher, directly adding the code to your library or application without introducing another dependency.</description>
     <language>en-US</language>
     <tags>exception throw helper</tags>
-	<developmentDependency>true</developmentDependency>
+	  <developmentDependency>true</developmentDependency>
+    <releaseNotes>
+      1.1.0:
+      -[Fix] Removed expensive null check on arguments in Throw.This() and Throw.When()
+    </releaseNotes>
   </metadata>
   <files>
         <file src=".\Throw.cs.pp" target="content\Helpers\Throw.cs.pp" />
