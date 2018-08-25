@@ -10,7 +10,7 @@ namespace Pitcher.Benchmarks.Benchmarks
     {
       try
       {
-        throw null;
+        throw new Exception("foo");
       }
       catch
       {
