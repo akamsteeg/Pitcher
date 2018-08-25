@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pitcher.Sources", "Pitcher.
 		Pitcher.Sources\Pitcher.Sources.nuspec = Pitcher.Sources\Pitcher.Sources.nuspec
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitcher.Benchmarks", "Pitcher.Benchmarks\Pitcher.Benchmarks.csproj", "{74E5499E-492D-4F21-A3D3-8341527DEA8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,18 @@ Global
 		{E11962C4-62A3-4187-B868-D04F0F14A7AB}.Release|x64.Build.0 = Release|Any CPU
 		{E11962C4-62A3-4187-B868-D04F0F14A7AB}.Release|x86.ActiveCfg = Release|Any CPU
 		{E11962C4-62A3-4187-B868-D04F0F14A7AB}.Release|x86.Build.0 = Release|Any CPU
+		{74E5499E-492D-4F21-A3D3-8341527DEA8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E5499E-492D-4F21-A3D3-8341527DEA8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E5499E-492D-4F21-A3D3-8341527DEA8B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{74E5499E-492D-4F21-A3D3-8341527DEA8B}.Debug|x64.Build.0 = Debug|Any CPU
+		{74E5499E-492D-4F21-A3D3-8341527DEA8B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{74E5499E-492D-4F21-A3D3-8341527DEA8B}.Debug|x86.Build.0 = Debug|Any CPU
+		{74E5499E-492D-4F21-A3D3-8341527DEA8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E5499E-492D-4F21-A3D3-8341527DEA8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74E5499E-492D-4F21-A3D3-8341527DEA8B}.Release|x64.ActiveCfg = Release|Any CPU
+		{74E5499E-492D-4F21-A3D3-8341527DEA8B}.Release|x64.Build.0 = Release|Any CPU
+		{74E5499E-492D-4F21-A3D3-8341527DEA8B}.Release|x86.ActiveCfg = Release|Any CPU
+		{74E5499E-492D-4F21-A3D3-8341527DEA8B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
