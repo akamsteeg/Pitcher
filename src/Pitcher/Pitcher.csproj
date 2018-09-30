@@ -13,7 +13,6 @@
     <Authors>Alex Kamsteeg (https://atlex.nl/)</Authors>
     <Company />
     <PackageProjectUrl>https://github.com/akamsteeg/Pitcher</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/akamsteeg/Pitcher.git</RepositoryUrl>
     <PackageTags>exception throw helper</PackageTags>
     <PackageLicenseUrl>https://github.com/akamsteeg/Pitcher/blob/master/LICENSE</PackageLicenseUrl>
     <PackageReleaseNotes>
@@ -23,13 +22,23 @@
 
     <DocumentationFile>docs\Pitcher.xml</DocumentationFile>
 
-    
+    <!-- SourceLink -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <RepositoryUrl>https://github.com/akamsteeg/Pitcher.git</RepositoryUrl>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="docs\**" />
     <EmbeddedResource Remove="docs\**" />
     <None Remove="docs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
