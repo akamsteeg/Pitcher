@@ -20,7 +20,9 @@ namespace Pitcher.Benchmarks
 
       config.Add(BenchmarkDotNet.Diagnosers.MemoryDiagnoser.Default);
 
-      config.Add(Job.ShortRun.With(CsProjCoreToolchain.NetCoreApp20));
+      config.Add(Job.ShortRun.With(CsProjCoreToolchain.NetCoreApp20).AsBaseline());
+      config.Add(Job.ShortRun.With(CsProjCoreToolchain.NetCoreApp21));
+      config.Add(Job.ShortRun.With(CsProjCoreToolchain.NetCoreApp22));
       config.Add(Job.ShortRun.With(CsProjClassicNetToolchain.Net462));
 
       return config;
