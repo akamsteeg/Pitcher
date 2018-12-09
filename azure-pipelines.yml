@@ -6,6 +6,14 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: NuGetToolInstaller@0
+  displayName: 'Use NuGet 4.7.0'
+  inputs:
+    versionSpec: 4.7.0
+
+- script: dotnet tool install dotnet-reportgenerator-globaltool --version 4.0.0 --tool-path .
+  displayName: 'Install report generator tool'
+
 - task: DotNetCoreCLI@2
   displayName: 'Restore packages'
   inputs:
@@ -34,10 +42,6 @@ steps:
     command: test
     projects: '$(Build.SourcesDirectory)\src\Pitcher.Tests\Pitcher.Tests.csproj'
     arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
-
-
-- script: dotnet tool install dotnet-reportgenerator-globaltool --version 4.0.0 --tool-path .
-  displayName: 'Install report generator tool'
 
 - script: .\reportgenerator "-reports:$(Build.SourcesDirectory)\src\Pitcher.Tests\coverage.cobertura.xml" "-targetdir:"$(Build.SourcesDirectory)\src\Pitcher.Tests\report\" "-reporttypes:HTMLInline;HTMLChart"
   displayName: 'Create code coverage report'
