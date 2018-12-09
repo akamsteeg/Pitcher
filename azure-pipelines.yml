@@ -24,7 +24,7 @@ steps:
   displayName: 'Run tests'
   inputs:
     command: test
-    projects: '$(Build.SourcesDirectory)\src\Pitcher\Pitcher.Tests.csproj'
+    projects: '$(Build.SourcesDirectory)\src\Pitcher.Tests.csproj'
     arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura'
 
 
