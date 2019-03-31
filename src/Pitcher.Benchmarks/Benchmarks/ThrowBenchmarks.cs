@@ -42,5 +42,17 @@ namespace Pitcher.Benchmarks.Benchmarks
       {
       }
     }
+
+    [Benchmark]
+    public void ThrowWhenFactory()
+    {
+      try
+      {
+        Throw.When(1 < 2, () => new Exception("foo"));
+      }
+      catch
+      {
+      }
+    }
   }
 }

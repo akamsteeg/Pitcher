@@ -65,6 +65,7 @@ namespace Pitcher
     {
       throw exceptionToThrow;
     }
+    
 
     /// <summary>
     /// Throw the specified <see cref="Exception"/> when the specified condition
@@ -82,6 +83,26 @@ namespace Pitcher
       if (condition)
       {
         throw exceptionToThrow;
+      }
+    }
+
+    /// <summary>
+    /// Throw the specified <see cref="Exception"/> when the specified condition
+    /// is true
+    /// </summary>
+    /// <param name="condition">
+    /// The condition to determine whether to throw the <see cref="Exception"/>
+    /// or not
+    /// </param>
+    /// <param name="exceptionFactory">
+    /// The <see cref="Func{TResult}"/> that creates the <see cref="Exception"/>
+    /// to throw
+    /// </param>
+    public static void When(bool condition, Func<Exception> exceptionFactory)
+    {
+      if (condition)
+      {
+        throw exceptionFactory.Invoke();
       }
     }
 
