@@ -50,6 +50,11 @@ Throw an exception based on a condition:
 Throw.When(args == null, new ArgumentNullException(nameof(args)); // This will always allocate the exception
 ```
 
+Throw an exception based on a condition, with a `Func<T>` to create the exception in a more complex way:
+```csharp
+Throw.When(args == null, () => new ArgumentNullException(nameof(args));
+```
+
 #### ArgumentNullException
 
 There are helpers for simplifying argument checking and throwing an `ArgumentNullException`.
