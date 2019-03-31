@@ -4,7 +4,7 @@
     <TargetFrameworks>net40;netstandard1.0;</TargetFrameworks>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
 
-    <Version>1.2.0</Version>
+    <Version>1.3.0</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Pitcher is helper library to simplify throwing exceptions and make methods easier to inline by reducing code size.</Description>
@@ -13,8 +13,10 @@
     <Company />
     <PackageProjectUrl>https://github.com/akamsteeg/Pitcher</PackageProjectUrl>
     <PackageTags>exception throw helper</PackageTags>
-    <PackageLicenseUrl>https://github.com/akamsteeg/Pitcher/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReleaseNotes>
+      1.3.0:
+      - [Feature] Added Throw.When(bool, Func&lt;Exception&gt;)
       1.2.0:
       - [Feature] Enabled SourceLink support (#1)
       1.1.0:
@@ -36,7 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02">
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-18618-05">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>

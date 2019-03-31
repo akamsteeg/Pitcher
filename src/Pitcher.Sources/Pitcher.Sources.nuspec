@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Pitcher.Sources</id>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <authors>Alex Kamsteeg</authors>
     <licenseUrl>https://github.com/akamsteeg/Pitcher/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/akamsteeg/Pitcher</projectUrl>
@@ -12,6 +12,8 @@
     <tags>exception throw helper</tags>
 	  <developmentDependency>true</developmentDependency>
     <releaseNotes>
+      1.2.0: 
+      - [Feature] Added Throw.When(bool, Func&lt;Exception&gt;)
       1.1.0:
       -[Fix] Removed expensive null check on arguments in Throw.This() and Throw.When()
     </releaseNotes>
