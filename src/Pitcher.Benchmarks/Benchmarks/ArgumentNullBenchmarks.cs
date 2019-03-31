@@ -5,7 +5,7 @@ namespace Pitcher.Benchmarks.Benchmarks
 {
   public class ArgumentNullBenchmarks
   {
-    [Benchmark(Baseline = true)]
+    [Benchmark]
     public void IfNullThenThrow()
     {
       try

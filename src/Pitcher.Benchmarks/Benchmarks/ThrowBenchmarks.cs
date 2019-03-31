@@ -5,7 +5,7 @@ namespace Pitcher.Benchmarks.Benchmarks
 {
   public class ThrowBenchmarks
   {
-    [Benchmark(Baseline = true)]
+    [Benchmark]
     public void ThrowException()
     {
       try

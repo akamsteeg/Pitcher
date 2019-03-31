@@ -7,7 +7,7 @@ namespace Pitcher.Benchmarks.Benchmarks
 {
   public class ArgumentOutOfRangeBenchmarks
   {
-    [Benchmark(Baseline = true)]
+    [Benchmark]
     public void IfOutOfRangeThenThrow()
     {
       try
