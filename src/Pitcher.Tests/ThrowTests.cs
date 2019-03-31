@@ -22,5 +22,17 @@ namespace Pitcher.Tests
     {
       Throw.When(false, new Exception());
     }
+
+    [Fact]
+    public void WhenFactory_ConditionTrue_Throws()
+    {
+      Assert.ThrowsAny<Exception>(() => Throw.When(true, () => new Exception()));
+    }
+
+    [Fact]
+    public void WhenFactory_ConditionFalse_DoesNotThrow()
+    {
+      Throw.When(false, () => new Exception());
+    }
   }
 }
