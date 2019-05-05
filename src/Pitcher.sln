@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitcher", "Pitcher\Pitcher.csproj", "{129F683E-8470-4E0D-9971-726F78B3A607}"
 EndProject
@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pitcher.Sources", "Pitcher.
 		Pitcher.Sources\Pitcher.Sources.nuspec = Pitcher.Sources\Pitcher.Sources.nuspec
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pitcher.Benchmarks", "Pitcher.Benchmarks\Pitcher.Benchmarks.csproj", "{74E5499E-492D-4F21-A3D3-8341527DEA8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitcher.Benchmarks", "Pitcher.Benchmarks\Pitcher.Benchmarks.csproj", "{74E5499E-492D-4F21-A3D3-8341527DEA8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
