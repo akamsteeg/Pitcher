@@ -7,9 +7,9 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@0
-  displayName: 'Use NuGet 4.9.0'
+  displayName: 'Use NuGet 4.9.4'
   inputs:
-    versionSpec: 4.9.0
+    versionSpec: 4.9.4
     
 - task: DotNetCoreCLI@2
   displayName: 'Restore packages'
