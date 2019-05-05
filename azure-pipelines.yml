@@ -6,6 +6,11 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: NuGetToolInstaller@0
+  displayName: 'Use NuGet 4.9.0'
+  inputs:
+    versionSpec: 4.9.0
+    
 - task: DotNetCoreCLI@2
   displayName: 'Restore packages'
   inputs:
