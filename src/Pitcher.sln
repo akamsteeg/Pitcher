@@ -7,12 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitcher", "Pitcher\Pitcher.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitcher.Tests", "Pitcher.Tests\Pitcher.Tests.csproj", "{E11962C4-62A3-4187-B868-D04F0F14A7AB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pitcher.Sources", "Pitcher.Sources", "{0C8FFA70-E73C-4767-B08E-EFE55098FB40}"
-	ProjectSection(SolutionItems) = preProject
-		Pitcher.Sources\buildpackage.ps1 = Pitcher.Sources\buildpackage.ps1
-		Pitcher.Sources\Pitcher.Sources.nuspec = Pitcher.Sources\Pitcher.Sources.nuspec
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pitcher.Benchmarks", "Pitcher.Benchmarks\Pitcher.Benchmarks.csproj", "{74E5499E-492D-4F21-A3D3-8341527DEA8B}"
 EndProject
 Global
