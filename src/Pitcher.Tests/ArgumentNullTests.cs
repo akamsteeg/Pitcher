@@ -104,5 +104,64 @@ namespace Pitcher.Tests
         Assert.Contains(message, e.Message);
       }
     }
+
+
+    [Fact]
+    public void WhenNull_WithString_DoesNotThrow()
+    {
+      Throw.ArgumentNull.WhenNull("DUMMY", "TEST");
+    }
+
+    [Fact]
+    public void WhenNull_String_WithNull_Throws()
+    {
+      Assert.Throws<ArgumentNullException>(() =>
+        Throw.ArgumentNull.WhenNull((string)null, "TEST")
+      );
+    }
+
+    [Fact]
+    public void WhenNull_String_WithMessage_WithNull_Throws()
+    {
+      Assert.Throws<ArgumentNullException>(() =>
+        Throw.ArgumentNull.WhenNull((string)null, "TEST", "message")
+      );
+    }
+
+    [Fact]
+    public void WhenNull_String_WithNull_SetCorrectParameterNameOnException()
+    {
+      const string parameterName = "TEST";
+
+      Assert.Throws<ArgumentNullException>(parameterName, () =>
+        Throw.ArgumentNull.WhenNull((string)null, parameterName)
+      );
+    }
+
+    [Fact]
+    public void WhenNull_String_WithMessage_WithNull_SetCorrectParameterNameOnException()
+    {
+      const string parameterName = "TEST";
+
+      Assert.Throws<ArgumentNullException>(parameterName, () =>
+        Throw.ArgumentNull.WhenNull((string)null, parameterName, "message")
+      );
+    }
+
+    [Fact]
+    public void WhenNull_String_WithMessage_WithNull_SetCorrectMessageOnException()
+    {
+      const string parameterName = "TEST";
+      const string message = "TESTMESSAGE";
+
+      try
+      {
+        Throw.ArgumentNull.WhenNull((string)null, parameterName, message);
+      }
+      catch (ArgumentNullException e)
+      {
+        Assert.Contains(message, e.Message);
+      }
+    }
   }
 }

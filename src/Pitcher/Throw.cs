@@ -203,11 +203,42 @@ namespace Pitcher
       /// The name of the parameter to throw the <see
       /// cref="ArgumentNullException"/> for
       /// </param>
+      public static void WhenNull(string obj, string parameterName) =>
+        Throw.ArgumentNull.When(string.IsNullOrEmpty(obj), parameterName);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentNullException"/> for the specified
+      /// parameter when the specified <see cref="object"/> is null
+      /// </summary>
+      /// <param name="obj">
+      /// The <see cref="object"/> to check for null
+      /// </param>
+      /// <param name="parameterName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentNullException"/> for
+      /// </param>
       /// <param name="message">
       /// The message to include in the <see cref="ArgumentNullException"/>
       /// </param>
       public static void WhenNull(object obj, string parameterName, string message) =>
         Throw.ArgumentNull.When(obj == null, parameterName, message);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentNullException"/> for the specified
+      /// parameter when the specified <see cref="object"/> is null
+      /// </summary>
+      /// <param name="obj">
+      /// The <see cref="object"/> to check for null
+      /// </param>
+      /// <param name="parameterName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentNullException"/> for
+      /// </param>
+      /// <param name="message">
+      /// The message to include in the <see cref="ArgumentNullException"/>
+      /// </param>
+      public static void WhenNull(string obj, string parameterName, string message) =>
+        Throw.ArgumentNull.When(string.IsNullOrEmpty(obj), parameterName, message);
     }
 
     /// <summary>

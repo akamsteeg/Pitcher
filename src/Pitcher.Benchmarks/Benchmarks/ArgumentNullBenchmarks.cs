@@ -63,5 +63,19 @@ namespace Pitcher.Benchmarks.Benchmarks
       {
       }
     }
+
+    [Benchmark]
+    public void ThrowArgumentNullWhenStringNull()
+    {
+      try
+      {
+        object obj = null;
+
+        Throw.ArgumentNull.WhenNull((string)obj, nameof(obj));
+      }
+      catch
+      {
+      }
+    }
   }
 }
