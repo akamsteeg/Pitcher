@@ -24,14 +24,6 @@ steps:
     command: build
     projects: '**/*.sln'
     arguments: '--configuration $(buildConfiguration)'
-    
-- task: PowerShell@2
-  displayName: 'Build Pitcher.Sources package'
-  inputs:
-    targetType: filePath
-    filePath: ./src/Pitcher.Sources/buildpackage.ps1    
-    arguments: '-nuGetExePath nuget.exe'
-    workingDirectory: src/Pitcher.Sources
 
 - task: DotNetCoreCLI@2
   displayName: 'Run tests'
