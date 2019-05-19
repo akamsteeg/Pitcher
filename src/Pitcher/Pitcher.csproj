@@ -4,7 +4,7 @@
     <TargetFrameworks>net40;netstandard1.0;</TargetFrameworks>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
 
-    <Version>1.3.0</Version>
+    <Version>1.4.0</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Pitcher is helper library to simplify throwing exceptions and make methods easier to inline by reducing code size.</Description>
@@ -15,6 +15,9 @@
     <PackageTags>exception throw helper</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReleaseNotes>
+      1.4.0:
+      - [Feature] Moved from SourceLink with embedded PDB to a .snupkg on NuGet.org for debugging (#3)
+      - [Feature] Added overloads for Throw.ArgumentNull.WhenNull() for strings (#4)
       1.3.0:
       - [Feature] Added Throw.When(bool, Func&lt;Exception&gt;)
       1.2.0:
