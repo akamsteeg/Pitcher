@@ -19,6 +19,7 @@ The Pitcher NuGet package is the prefered way to install and use it.
 
 ```powershell
 install-package Pitcher
+```
 
 ## Usage
 
