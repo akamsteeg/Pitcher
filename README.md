@@ -16,17 +16,6 @@ The Pitcher NuGet package is the prefered way to install and use it.
 
 ```powershell
 install-package Pitcher
-```
-
-### Pitcher.Sources
-
-For non-SDK `.csproj` projects, a .Sources package is also available. This adds a new source file, `Helpers\Throw.cs` to your project with an internal class`Throw`. This avoids introducing a dependency to your project.
-
-```powershell
-install-package Pitcher.Sources -pre
-```
-
-SDK-style projects do not support .Sources packages.
 
 ## Usage
 
