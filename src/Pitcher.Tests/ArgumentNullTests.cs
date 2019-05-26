@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace Pitcher.Tests
@@ -163,5 +165,108 @@ namespace Pitcher.Tests
         Assert.Contains(message, e.Message);
       }
     }
+
+    #region Throw.ArgumentNullOrEmpty<T>(IEnumerable<T>, string)
+
+    [Fact]
+    public void WhenNullOrEmpty_WithNullIEnumerableT_Throws()
+    {
+      IEnumerable<object> obj = null;
+      Assert.Throws<ArgumentNullException>(() => 
+        Throw.ArgumentNull.WhenNullOrEmpty(obj, nameof(obj))
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrEmpty_WithEmptyIEnumerableT_Throws()
+    {
+      IEnumerable<object> obj = Enumerable.Empty<object>();
+      Assert.Throws<ArgumentNullException>(() =>
+        Throw.ArgumentNull.WhenNullOrEmpty(obj, nameof(obj))
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrEmpty_WithEmptyIEnumerableT_SetCorrectParameterNameOnException()
+    {
+      const string parameterName = "TEST";
+
+      IEnumerable<object> obj = Enumerable.Empty<object>();
+
+      Assert.Throws<ArgumentNullException>(parameterName, () =>
+        Throw.ArgumentNull.WhenNullOrEmpty(obj, parameterName)
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrEmpty_WithNotEmptyIEnumerableT_DoesNotThrow()
+    {
+      IEnumerable<object> obj = new List<object>() { new object() };
+
+      Throw.ArgumentNull.WhenNullOrEmpty(obj, nameof(obj));
+    }
+
+
+    #endregion
+
+    #region Throw.ArgumentNull.WhenNullOrEmpty<T>(IEnumerable<T>, string string)
+
+    [Fact]
+    public void WhenNullOrEmpty_WithMessage_WithNullIEnumerableT_Throws()
+    {
+      IEnumerable<object> obj = null;
+      Assert.Throws<ArgumentNullException>(() =>
+        Throw.ArgumentNull.WhenNullOrEmpty(obj, nameof(obj), "message")
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrEmpty_WithMessage_WithEmptyIEnumerableT_Throws()
+    {
+      IEnumerable<object> obj = Enumerable.Empty<object>();
+      Assert.Throws<ArgumentNullException>(() =>
+        Throw.ArgumentNull.WhenNullOrEmpty(obj, nameof(obj), "message")
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrEmpty_WithMessage_WithEmptyIEnumerableT_SetCorrectParameterNameOnException()
+    {
+      const string parameterName = "TEST";
+
+      IEnumerable<object> obj = Enumerable.Empty<object>();
+
+      Assert.Throws<ArgumentNullException>(parameterName, () =>
+        Throw.ArgumentNull.WhenNullOrEmpty(obj, parameterName, "message")
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrEmpty_WithMessage_WithEmptyIEnumerableT_SetCorrectMessageOnException()
+    {
+      const string parameterName = "TEST";
+      const string message = "TESTMESSAGE";
+
+      IEnumerable<object> obj = Enumerable.Empty<object>();
+
+      try
+      {
+        Throw.ArgumentNull.WhenNullOrEmpty(obj, parameterName, message);
+      }
+      catch (ArgumentNullException e)
+      {
+        Assert.Contains(message, e.Message);
+      }
+    }
+
+    [Fact]
+    public void WhenNullOrEmpty_WithMessage_WithNotEmptyIEnumerableT_DoesNotThrow()
+    {
+      IEnumerable<object> obj = new List<object>() { new object() };
+
+      Throw.ArgumentNull.WhenNullOrEmpty(obj, nameof(obj), "message");
+    }
+
+    #endregion
   }
 }

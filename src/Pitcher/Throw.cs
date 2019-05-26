@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Pitcher
 {
@@ -239,6 +241,39 @@ namespace Pitcher
       /// </param>
       public static void WhenNull(string obj, string parameterName, string message) =>
         Throw.ArgumentNull.When(string.IsNullOrEmpty(obj), parameterName, message);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentNullException"/> for the specified
+      /// parameter when the specified <see cref="IEnumerable{T}"/> is null 
+      /// or empty
+      /// </summary>
+      /// <param name="obj">
+      /// The <see cref="IEnumerable{T}"/> to check for null or emptiness
+      /// </param>
+      /// <param name="parameterName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentNullException"/> for
+      /// </param>
+      public static void WhenNullOrEmpty<T>(IEnumerable<T> obj, string parameterName) =>
+        Throw.ArgumentNull.When(obj == null || !obj.Any(), parameterName);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentNullException"/> for the specified
+      /// parameter when the specified <see cref="IEnumerable{T}"/> is null 
+      /// or empty
+      /// </summary>
+      /// <param name="obj">
+      /// The <see cref="IEnumerable{T}"/> to check for null or emptiness
+      /// </param>
+      /// <param name="parameterName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentNullException"/> for
+      /// </param>
+      /// <param name="message">
+      /// The message to include in the <see cref="ArgumentNullException"/>
+      /// </param>
+      public static void WhenNullOrEmpty<T>(IEnumerable<T> obj, string parameterName, string message) =>
+        Throw.ArgumentNull.When(obj == null || !obj.Any(), parameterName, message);
     }
 
     /// <summary>
