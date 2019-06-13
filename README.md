@@ -3,7 +3,7 @@
 Pitcher is a utility library to simplify throwing exceptions, especially when checking arguments. It makes methods easier to inline, by reducing code size.
 
 
-[![Build Status](https://interastra.visualstudio.com/OSS%20-%20CI/_apis/build/status/Pitcher%20CI?branchName=master)](https://interastra.visualstudio.com/OSS%20-%20CI/_build/latest?definitionId=14&branchName=master) [![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/interastra/OSS%20-%20CI/14.svg?cacheSeconds=3600)](https://dev.azure.com/interastra/OSS%20-%20CI/_build?definitionId=14&_a=summary) 
+[![Build Status](https://interastra.visualstudio.com/OSS%20-%20CI/_apis/build/status/Pitcher%20CI?branchName=master)](https://dev.azure.com/interastra/OSS%20-%20CI/_build?definitionId=14&_a=summary&branchName=master) [![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/interastra/OSS%20-%20CI/14.svg?cacheSeconds=3600)](https://dev.azure.com/interastra/OSS%20-%20CI/_build?definitionId=14&_a=summary) 
 
 ## Platform support
 
