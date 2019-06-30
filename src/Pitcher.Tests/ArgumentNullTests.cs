@@ -166,6 +166,68 @@ namespace Pitcher.Tests
       }
     }
 
+    #region Throw.ArgumentNullOrEmpty.WhenNullOrEmpty(string)
+
+    [Fact]
+    public void WhenNullOrEmpty_WithString_DoesNotThrow()
+    {
+      Throw.ArgumentNull.WhenNullOrEmpty("DUMMY", "TEST");
+    }
+
+    [Fact]
+    public void WhenNullOrEmpty_String_WithNull_Throws()
+    {
+      Assert.Throws<ArgumentNullException>(() =>
+        Throw.ArgumentNull.WhenNullOrEmpty((string)null, "TEST")
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrEmpty_String_WithMessage_WithNull_Throws()
+    {
+      Assert.Throws<ArgumentNullException>(() =>
+        Throw.ArgumentNull.WhenNullOrEmpty((string)null, "TEST", "message")
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrEmpty_String_WithNull_SetCorrectParameterNameOnException()
+    {
+      const string parameterName = "TEST";
+
+      Assert.Throws<ArgumentNullException>(parameterName, () =>
+        Throw.ArgumentNull.WhenNullOrEmpty((string)null, parameterName)
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrEmpty_String_WithMessage_WithNull_SetCorrectParameterNameOnException()
+    {
+      const string parameterName = "TEST";
+
+      Assert.Throws<ArgumentNullException>(parameterName, () =>
+        Throw.ArgumentNull.WhenNullOrEmpty((string)null, parameterName, "message")
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrEmpty_String_WithMessage_WithNull_SetCorrectMessageOnException()
+    {
+      const string parameterName = "TEST";
+      const string message = "TESTMESSAGE";
+
+      try
+      {
+        Throw.ArgumentNull.WhenNullOrEmpty((string)null, parameterName, message);
+      }
+      catch (ArgumentNullException e)
+      {
+        Assert.Contains(message, e.Message);
+      }
+    }
+
+    #endregion
+
     #region Throw.ArgumentNullOrEmpty<T>(IEnumerable<T>, string)
 
     [Fact]
