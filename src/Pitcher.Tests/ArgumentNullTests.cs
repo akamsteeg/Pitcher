@@ -47,7 +47,7 @@ namespace Pitcher.Tests
     public void WhenNull_WithNull_Throws()
     {
       Assert.Throws<ArgumentNullException>(() =>
-        Throw.ArgumentNull.WhenNull(null, "TEST")
+        Throw.ArgumentNull.WhenNull((object)null, "TEST")
       );
     }
 
@@ -63,7 +63,7 @@ namespace Pitcher.Tests
       const string parameterName = "TEST";
 
       Assert.Throws<ArgumentNullException>(parameterName, () =>
-        Throw.ArgumentNull.WhenNull(null, parameterName)
+        Throw.ArgumentNull.WhenNull((object)null, parameterName)
       );
     }
 
@@ -71,7 +71,7 @@ namespace Pitcher.Tests
     public void WhenNull_WithMessage_WithNull_Throws()
     {
       Assert.Throws<ArgumentNullException>(() =>
-        Throw.ArgumentNull.WhenNull(null, "TEST", "message")
+        Throw.ArgumentNull.WhenNull((object)null, "TEST", "message")
       );
     }
 
@@ -87,7 +87,7 @@ namespace Pitcher.Tests
       const string parameterName = "TEST";
 
       Assert.Throws<ArgumentNullException>(parameterName, () =>
-        Throw.ArgumentNull.WhenNull(null, parameterName, "message")
+        Throw.ArgumentNull.WhenNull((object)null, parameterName, "message")
       );
     }
 
@@ -99,7 +99,7 @@ namespace Pitcher.Tests
 
       try
       {
-        Throw.ArgumentNull.WhenNull(null, parameterName, message);
+        Throw.ArgumentNull.WhenNull((object)null, parameterName, message);
       }
       catch (ArgumentNullException e)
       {
