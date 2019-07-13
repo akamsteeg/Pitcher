@@ -1,0 +1,19 @@
+# Build a solution
+
+parameters:
+  buildConfiguration: 'Release'
+
+steps:
+- task: DotNetCoreCLI@2
+  displayName: 'Restore packages'
+  inputs:
+    command: restore
+    projects: '**/*.csproj'
+    arguments: '--configuration ${{ parameters.buildConfiguration }}'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Build solution'
+  inputs:
+    command: build
+    projects: '**/*.sln'
+    arguments: '--configuration ${{ parameters.buildConfiguration }}'

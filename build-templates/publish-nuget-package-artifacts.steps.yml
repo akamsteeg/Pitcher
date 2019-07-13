@@ -1,0 +1,22 @@
+# Publishes NuGet packages as build artifacts
+
+steps:
+- task: CopyFiles@2
+  displayName: 'Copy NuGet package to: $(build.artifactstagingdirectory)'
+  inputs:
+    Contents: '**/*.nupkg'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+    flattenFolders: true
+    
+- task: CopyFiles@2
+  displayName: 'Copy NuGet symbols package to: $(build.artifactstagingdirectory)'
+  inputs:
+    Contents: '**/*.snupkg'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+    flattenFolders: true
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: NuGet packages'
+  inputs:
+    PathtoPublish: '$(build.artifactstagingdirectory)'
+    ArtifactName: 'NuGet packages'

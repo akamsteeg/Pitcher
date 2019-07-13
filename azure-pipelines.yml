@@ -1,63 +1,21 @@
-pool:
-  vmImage: 'windows-2019'
-
-variables:
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
-
-steps:
-- task: NuGetToolInstaller@0
-  displayName: 'Use NuGet 4.9.4'
-  inputs:
-    versionSpec: 4.9.4
+jobs:
+- template: build-templates/build-package.job.yml
+  parameters:
+    name: Windows
+    vmImage: 'windows-2019'
+    publishBuildArtifacts: 'true'
+    publishCodeCoverage: 'true'
     
-- task: DotNetCoreCLI@2
-  displayName: 'Restore packages'
-  inputs:
-    command: restore
-    projects: '**/*.csproj'
-    arguments: '--configuration $(build.configuration)'
+- template: build-templates/build-package.job.yml
+  parameters:
+    name: Linux
+    vmImage: 'ubuntu-16.04'
+    publishBuildArtifacts: 'false'
+    publishCodeCoverage: 'false'
 
-- task: DotNetCoreCLI@2
-  displayName: 'Build solution'
-  inputs:
-    command: build
-    projects: '**/*.sln'
-    arguments: '--configuration $(buildConfiguration)'
-
-- task: DotNetCoreCLI@2
-  displayName: 'Run tests'
-  inputs:
-    command: test
-    projects: '$(Build.SourcesDirectory)\src\Pitcher.Tests\Pitcher.Tests.csproj'
-    arguments: '--configuration $(buildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude="[xunit*]*%2c[*.Tests]*"'
-
-- task: PublishCodeCoverageResults@1
-  displayName: 'Publish code coverage results'
-  inputs:
-    summaryFileLocation: $(Build.SourcesDirectory)\src\Pitcher.Tests\coverage.cobertura.xml
-    codecoverageTool: cobertura
-
-- task: CopyFiles@2
-  displayName: 'Copy NuGet package to: $(build.artifactstagingdirectory)'
-  inputs:
-    Contents: '**/*.nupkg'
-    TargetFolder: '$(build.artifactstagingdirectory)'
-    flattenFolders: true
-    
-- task: CopyFiles@2
-  displayName: 'Copy NuGet symbols package to: $(build.artifactstagingdirectory)'
-  inputs:
-    Contents: '**/*.snupkg'
-    TargetFolder: '$(build.artifactstagingdirectory)'
-    flattenFolders: true
-
-
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: NuGet packages'
-  inputs:
-    PathtoPublish: '$(build.artifactstagingdirectory)'
-
-    ArtifactName: 'NuGet packages'
-
-
+- template: build-templates/build-package.job.yml
+  parameters:
+    name: MacOS
+    vmImage: 'macOS-10.14'
+    publishBuildArtifacts: 'false'
+    publishCodeCoverage: 'false'

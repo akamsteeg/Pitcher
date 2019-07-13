@@ -1,0 +1,22 @@
+# Run the XUnit unit tests and optionally publish the Coverlet code coverage results
+
+parameters:
+  buildConfiguration: 'Release'
+  pathToUnitTestProject: '$(Build.SourcesDirectory)/**/*.Tests.csproj'
+  publishCodeCoverage: 'true'
+  excludeFromCodeCoverage: '[xunit*]*%2c[*.Tests]*'
+
+steps:
+- task: DotNetCoreCLI@2
+  displayName: 'Run tests'
+  inputs:
+    command: test
+    projects: '${{ parameters.pathToUnitTestProject }}'
+    arguments: '--configuration ${{ parameters.buildConfiguration }} /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude="${{ parameters.excludeFromCodeCoverage }}"'
+
+- ${{ if eq(parameters.publishCodeCoverage, 'true') }}:
+  - task: PublishCodeCoverageResults@1
+    displayName: 'Publish code coverage results'
+    inputs:
+      summaryFileLocation: $(Build.SourcesDirectory)/**/coverage.cobertura.xml
+      codecoverageTool: cobertura
