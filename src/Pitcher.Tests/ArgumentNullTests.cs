@@ -107,7 +107,6 @@ namespace Pitcher.Tests
       }
     }
 
-
     [Fact]
     public void WhenNull_WithString_DoesNotThrow()
     {
@@ -219,6 +218,84 @@ namespace Pitcher.Tests
       try
       {
         Throw.ArgumentNull.WhenNullOrEmpty((string)null, parameterName, message);
+      }
+      catch (ArgumentNullException e)
+      {
+        Assert.Contains(message, e.Message);
+      }
+    }
+
+    #endregion
+
+    #region Throw.ArgumentNullOrEmpty.WhenNullOrWhiteSpace(string)
+
+    [Fact]
+    public void WhenNullOrWhiteSpace_WithString_DoesNotThrow()
+    {
+      Throw.ArgumentNull.WhenNullOrWhiteSpace("DUMMY", "TEST");
+    }
+
+    [Fact]
+    public void WhenNullOrWhiteSpace_String_WithNull_Throws()
+    {
+      Assert.Throws<ArgumentNullException>(() =>
+        Throw.ArgumentNull.WhenNullOrWhiteSpace((string)null, "TEST")
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrWhiteSpace_String_WithEmptyString_Throws()
+    {
+      Assert.Throws<ArgumentNullException>(() =>
+        Throw.ArgumentNull.WhenNullOrWhiteSpace(string.Empty, "TEST")
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrWhiteSpace_String_WithMessage_WithNull_Throws()
+    {
+      Assert.Throws<ArgumentNullException>(() =>
+        Throw.ArgumentNull.WhenNullOrWhiteSpace((string)null, "TEST", "message")
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrWhiteSpace_String_WithMessage_WithEmptyString_Throws()
+    {
+      Assert.Throws<ArgumentNullException>(() =>
+        Throw.ArgumentNull.WhenNullOrWhiteSpace(string.Empty, "TEST", "message")
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrWhiteSpace_String_WithNull_SetCorrectParameterNameOnException()
+    {
+      const string parameterName = "TEST";
+
+      Assert.Throws<ArgumentNullException>(parameterName, () =>
+        Throw.ArgumentNull.WhenNullOrWhiteSpace((string)null, parameterName)
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrWhiteSpace_String_WithMessage_WithNull_SetCorrectParameterNameOnException()
+    {
+      const string parameterName = "TEST";
+
+      Assert.Throws<ArgumentNullException>(parameterName, () =>
+        Throw.ArgumentNull.WhenNullOrWhiteSpace((string)null, parameterName, "message")
+      );
+    }
+
+    [Fact]
+    public void WhenNullOrWhiteSpace_String_WithMessage_WithNull_SetCorrectMessageOnException()
+    {
+      const string parameterName = "TEST";
+      const string message = "TESTMESSAGE";
+
+      try
+      {
+        Throw.ArgumentNull.WhenNullOrWhiteSpace((string)null, parameterName, message);
       }
       catch (ArgumentNullException e)
       {

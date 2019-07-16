@@ -277,6 +277,39 @@ namespace Pitcher
 
       /// <summary>
       /// Throw an <see cref="ArgumentNullException"/> for the specified
+      /// parameter when the specified <see cref="string"/> is null, empty 
+      /// or whitespace
+      /// </summary>
+      /// <param name="obj">
+      /// The <see cref="string"/> to check for null, empty or whitespace
+      /// </param>
+      /// <param name="parameterName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentNullException"/> for
+      /// </param>
+      public static void WhenNullOrWhiteSpace(string obj, string parameterName) =>
+        Throw.ArgumentNull.When(string.IsNullOrWhiteSpace(obj), parameterName);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentNullException"/> for the specified
+      /// parameter when the specified <see cref="string"/> is null, empty 
+      /// or whitespace
+      /// </summary>
+      /// <param name="obj">
+      /// The <see cref="string"/> to check for null, empty or whitespace
+      /// </param>
+      /// <param name="parameterName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentNullException"/> for
+      /// </param>
+      /// <param name="message">
+      /// The message to include in the <see cref="ArgumentNullException"/>
+      /// </param>
+      public static void WhenNullOrWhiteSpace(string obj, string parameterName, string message) =>
+        Throw.ArgumentNull.When(string.IsNullOrWhiteSpace(obj), parameterName, message);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentNullException"/> for the specified
       /// parameter when the specified <see cref="IEnumerable{T}"/> is null 
       /// or empty
       /// </summary>
