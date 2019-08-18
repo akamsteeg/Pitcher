@@ -33,6 +33,11 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <RepositoryUrl>https://github.com/akamsteeg/Pitcher.git</RepositoryUrl>
+    
+    <!-- Strong naming -->
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>Pitcher.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
