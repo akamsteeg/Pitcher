@@ -39,11 +39,13 @@ Throw.This(new ArgumentNullException(nameof(args));
 ```
 
 Throw an exception based on a condition:
+
 ```csharp
 Throw.When(args == null, new ArgumentNullException(nameof(args)); // This will always allocate the exception
 ```
 
 Throw an exception based on a condition, with a `Func<T>` to create the exception in a more complex way:
+
 ```csharp
 Throw.When(args == null, () => new ArgumentNullException(nameof(args));
 ```
@@ -70,6 +72,24 @@ Throw.ArgumentNull.WhenNull(args, nameof(args));
 
 // Throw ArgumentNullException for parameter with a message, when the parameter is null
 Throw.ArgumentNull.WhenNull(args, nameof(args), "Args is a required parameter");
+
+// Throw ArgumentNullException for a null or empty string
+Throw.ArgumentNull.WhenNullOrEmpty(args, nameof(args));
+
+// Throw ArgumentNullException with a message for a null or empty string
+Throw.ArgumentNull.WhenNullOrEmpty(args, nameof(args), "Args is a required parameter");
+
+// Throw ArgumentNullException for a null, empty or whitespace string
+Throw.ArgumentNull.WhenNullOrWhitespace(args, nameof(args));
+
+// Throw ArgumentNullException with a message for a null, empty or whitespace string
+Throw.ArgumentNull.WhenNullOrWhitespace(args, nameof(args), "Args is a required parameter");
+
+// Throw ArgumentNullException for a null or empty IEnumerable<T>
+Throw.ArgumentNull.WhenNullOrEmpty(new List<string>(), nameof(args));
+
+// Throw ArgumentNullException with a message for a null or empty IEnumerable<T>
+Throw.ArgumentNull.WhenNullOrEmpty(new List<string>(), nameof(args), "Args is a required parameter");
 ```
 
 #### ArgumentOutOfRangeException
