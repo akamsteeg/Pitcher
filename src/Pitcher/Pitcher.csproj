@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
 
-    <Version>1.4.0</Version>
+    <Version>2.0.0</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Pitcher is helper library to simplify throwing exceptions and make methods easier to inline by reducing code size.</Description>
@@ -15,6 +15,12 @@
     <PackageTags>exception throw helper</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReleaseNotes>
+      2.0.0:
+      - [Breaking] Strong-named the assembly (#9)
+      - [Breaking] Moved to a single NETSTANDARD2.0 TFM (#5)
+      - [Deprecated] Throw.ArgumentNull.WhenNull(string, string) and Throw.ArgumentNull.WhenNull(string, string, string) are marked as obsolete (#7)
+      - [Feature] Added Throw.ArgumentNull.WhenNullOrEmpty(string, string) and Throw.ArgumentNull.WhenNullOrEmpty(string, string, string) to throw an ArgumentNullException on null or empty strings (#7)
+      - [Feature] Added Throw.ArgumentNull.WhenNullOrEmpty&lt;T&gt;(IEnumerable&lt;T&gt;, string) and Throw.ArgumentNull.WhenNullOrEmpty&lt;T&gt;(IEnumerable&lt;T&gt;, string, string) to throw an ArgumentNullException on null or empty enumerables (#6)
       1.4.0:
       - [Feature] Moved from SourceLink with embedded PDB to a .snupkg on NuGet.org for debugging (#3)
       - [Feature] Added overloads for Throw.ArgumentNull.WhenNull() for strings (#4)
@@ -23,7 +29,7 @@
       1.2.0:
       - [Feature] Enabled SourceLink support (#1)
       1.1.0:
-      -[Fix] Removed expensive null check on arguments in Throw.This() and Throw.When()
+      - [Fix] Removed expensive null check on arguments in Throw.This() and Throw.When()
     </PackageReleaseNotes>
 
     <DocumentationFile>docs\Pitcher.xml</DocumentationFile>
