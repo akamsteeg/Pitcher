@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pitcher.Tests.Fakes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
@@ -14,9 +15,40 @@ namespace Pitcher.Tests
     }
 
     [Fact]
+    public void For_ThrowsAndSetsCorrectArgumentName()
+    {
+      const string argumentName = "TEST";
+      try
+      {
+        Throw.ArgumentNull.For(argumentName);
+      }
+      catch(ArgumentNullException e)
+      {
+        Assert.Equal(argumentName, e.ParamName);
+      }
+    }
+
+    [Fact]
     public void For_WithMessage_Throws()
     {
       Assert.Throws<ArgumentNullException>("TEST", () => Throw.ArgumentNull.For("TEST", "message"));
+    }
+
+    [Fact]
+    public void For_WithMessage_ThrowsAndSetsCorrectArgumentName()
+    {
+      const string argumentName = "TEST";
+      const string message = "message";
+
+      try
+      {
+        Throw.ArgumentNull.For(argumentName, message);
+      }
+      catch (ArgumentNullException e)
+      {
+        Assert.Equal(argumentName, e.ParamName);
+        Assert.Contains(message, e.Message);
+      }
     }
 
     [Fact]
@@ -163,6 +195,25 @@ namespace Pitcher.Tests
       {
         Assert.Contains(message, e.Message);
       }
+    }
+
+    [Fact]
+    public void WhenNull_WithNull_OfObjectWithIncorrectOverridenEquals_DoesNotThrow()
+    {
+      var lyingObject = new ObjWithIncorrectOverridenEquals(); // .Equals(null) returns true
+
+      Throw.ArgumentNull.WhenNull(lyingObject, "TEST");
+    }
+
+    [Fact]
+    public void WhenNull_WithNull_WithMessage_OfObjectWithIncorrectOverridenEquals_DoesNotThrow()
+    {
+      const string parameterName = "TEST";
+      const string message = "TESTMESSAGE";
+
+      var lyingObject = new ObjWithIncorrectOverridenEquals(); // .Equals(null) returns true
+
+      Throw.ArgumentNull.WhenNull(lyingObject, parameterName, message);
     }
 
     #region Throw.ArgumentNullOrEmpty.WhenNullOrEmpty(string)

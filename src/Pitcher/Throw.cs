@@ -192,7 +192,7 @@ namespace Pitcher
       /// cref="ArgumentNullException"/> for
       /// </param>
       public static void WhenNull(object obj, string parameterName) =>
-        Throw.ArgumentNull.When(obj == null, parameterName);
+        Throw.ArgumentNull.When(obj is null, parameterName);
 
       /// <summary>
       /// Throw an <see cref="ArgumentNullException"/> for the specified
@@ -209,7 +209,7 @@ namespace Pitcher
       /// The message to include in the <see cref="ArgumentNullException"/>
       /// </param>
       public static void WhenNull(object obj, string parameterName, string message) =>
-        Throw.ArgumentNull.When(obj == null, parameterName, message);
+        Throw.ArgumentNull.When(obj is null, parameterName, message);
 
       /// <summary>
       /// Throw an <see cref="ArgumentNullException"/> for the specified
@@ -321,7 +321,7 @@ namespace Pitcher
       /// cref="ArgumentNullException"/> for
       /// </param>
       public static void WhenNullOrEmpty<T>(IEnumerable<T> obj, string parameterName) =>
-        Throw.ArgumentNull.When(obj == null || !obj.Any(), parameterName);
+        Throw.ArgumentNull.When(obj is null || !obj.Any(), parameterName);
 
       /// <summary>
       /// Throw an <see cref="ArgumentNullException"/> for the specified
@@ -339,7 +339,7 @@ namespace Pitcher
       /// The message to include in the <see cref="ArgumentNullException"/>
       /// </param>
       public static void WhenNullOrEmpty<T>(IEnumerable<T> obj, string parameterName, string message) =>
-        Throw.ArgumentNull.When(obj == null || !obj.Any(), parameterName, message);
+        Throw.ArgumentNull.When(obj is null || !obj.Any(), parameterName, message);
     }
 
     /// <summary>
