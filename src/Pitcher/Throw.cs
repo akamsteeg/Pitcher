@@ -67,7 +67,7 @@ namespace Pitcher
     {
       throw exceptionToThrow;
     }
-    
+
 
     /// <summary>
     /// Throw the specified <see cref="Exception"/> when the specified condition
@@ -413,6 +413,332 @@ namespace Pitcher
           Throw.This(new ArgumentOutOfRangeException(parameterName, message));
         }
       }
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a negative number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// </param>
+      public static void WhenNegativeNumber(int value, string argumentName)
+        => When(value < 0, argumentName);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a negative number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// </param>
+      /// <param name="message">
+      /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
+      /// </param>
+      public static void WhenNegativeNumber(int value, string argumentName, string message)
+        => When(value < 0, argumentName, message);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a negative number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// </param>
+      public static void WhenNegativeNumber(double value, string argumentName)
+        => When(value < 0.0D, argumentName);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a negative number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// </param>
+      /// <param name="message">
+      /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
+      /// </param>
+      public static void WhenNegativeNumber(double value, string argumentName, string message)
+        => When(value < 0.0D, argumentName, message);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a negative number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// </param>
+      public static void WhenNegativeNumber(float value, string argumentName)
+        => When(value < 0.0f, argumentName);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a negative number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// </param>
+      /// <param name="message">
+      /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
+      /// </param>
+      public static void WhenNegativeNumber(float value, string argumentName, string message)
+        => When(value < 0.0f, argumentName, message);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a negative number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// </param>
+      public static void WhenNegativeNumber(decimal value, string argumentName)
+        => When(value < 0.0m, argumentName);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a negative number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// </param>
+      /// <param name="message">
+      /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
+      /// </param>
+      public static void WhenNegativeNumber(decimal value, string argumentName, string message)
+        => When(value < 0.0m, argumentName, message);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a positive number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// '</param>
+      public static void WhenPositiveNumber(int value, string argumentName)
+        => When(value > 0, argumentName);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a positive number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// </param>
+      /// <param name="message">
+      /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
+      /// </param>
+      public static void WhenPositiveNumber(int value, string argumentName, string message)
+        => When(value > 0, argumentName, message);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a positive number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// '</param>
+      public static void WhenPositiveNumber(double value, string argumentName)
+        => When(value > 0.0D, argumentName);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a positive number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// </param>
+      /// <param name="message">
+      /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
+      /// </param>
+      public static void WhenPositiveNumber(double value, string argumentName, string message)
+        => When(value > 0.0D, argumentName, message);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a positive number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// '</param>
+      public static void WhenPositiveNumber(float value, string argumentName)
+        => When(value > 0.0f, argumentName);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a positive number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// </param>
+      /// <param name="message">
+      /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
+      /// </param>
+      public static void WhenPositiveNumber(float value, string argumentName, string message)
+        => When(value > 0.0f, argumentName, message);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a positive number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// '</param>
+      public static void WhenPositiveNumber(decimal value, string argumentName)
+        => When(value > 0.0m, argumentName);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a positive number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// </param>
+      /// <param name="message">
+      /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
+      /// </param>
+      public static void WhenPositiveNumber(decimal value, string argumentName, string message)
+        => When(value > 0.0m, argumentName, message);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a positive number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="mustBeMoreThan">
+      /// The value must be more than this
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// '</param>
+      public static void WhenLessThan<T>(T value, T mustBeMoreThan, string argumentName)
+        where T : IComparable<T>
+        => When(value.CompareTo(mustBeMoreThan) < 0, argumentName);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a positive number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="mustBeMoreThan">
+      /// The value must be more than this
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// '</param>
+      /// <param name="message">
+      /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
+      /// </param>
+      public static void WhenLessThan<T>(T value, T mustBeMoreThan, string argumentName, string message)
+        where T : IComparable<T>
+        => When(value.CompareTo(mustBeMoreThan) < 0, argumentName, message);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a positive number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="mustBeMoreThan">
+      /// The value must be more than this
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// </param>
+      public static void WhenMoreThan<T>(T value, T mustBeMoreThan, string argumentName)
+        where T : IComparable<T>
+        => When(value.CompareTo(mustBeMoreThan) > 0, argumentName);
+
+      /// <summary>
+      /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
+      /// the specified parameter name is a positive number
+      /// </summary>
+      /// <param name="value">
+      /// The value of the parameter The value
+      /// </param>
+      /// <param name="mustBeMoreThan">
+      /// The value must be more than this
+      /// </param>
+      /// <param name="argumentName">
+      /// The name of the parameter to throw the <see
+      /// cref="ArgumentOutOfRangeException"/> for
+      /// </param>
+      /// <param name="message">
+      /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
+      /// </param>
+      public static void WhenMoreThan<T>(T value, T mustBeMoreThan, string argumentName, string message)
+        where T : IComparable<T>
+        => When(value.CompareTo(mustBeMoreThan) > 0, argumentName, message);
     }
   }
 }
