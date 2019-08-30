@@ -419,7 +419,7 @@ namespace Pitcher
       /// the specified parameter name is a negative number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -433,7 +433,7 @@ namespace Pitcher
       /// the specified parameter name is a negative number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -450,7 +450,7 @@ namespace Pitcher
       /// the specified parameter name is a negative number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -464,7 +464,7 @@ namespace Pitcher
       /// the specified parameter name is a negative number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -481,7 +481,7 @@ namespace Pitcher
       /// the specified parameter name is a negative number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -495,7 +495,7 @@ namespace Pitcher
       /// the specified parameter name is a negative number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -512,7 +512,7 @@ namespace Pitcher
       /// the specified parameter name is a negative number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -526,7 +526,7 @@ namespace Pitcher
       /// the specified parameter name is a negative number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -543,7 +543,7 @@ namespace Pitcher
       /// the specified parameter name is a positive number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -557,7 +557,7 @@ namespace Pitcher
       /// the specified parameter name is a positive number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -574,7 +574,7 @@ namespace Pitcher
       /// the specified parameter name is a positive number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -588,7 +588,7 @@ namespace Pitcher
       /// the specified parameter name is a positive number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -605,7 +605,7 @@ namespace Pitcher
       /// the specified parameter name is a positive number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -619,7 +619,7 @@ namespace Pitcher
       /// the specified parameter name is a positive number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -636,7 +636,7 @@ namespace Pitcher
       /// the specified parameter name is a positive number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -650,7 +650,7 @@ namespace Pitcher
       /// the specified parameter name is a positive number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -667,7 +667,7 @@ namespace Pitcher
       /// the specified parameter name is a positive number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="mustBeMoreThan">
       /// The value must be more than this
@@ -685,7 +685,7 @@ namespace Pitcher
       /// the specified parameter name is a positive number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="mustBeMoreThan">
       /// The value must be more than this
@@ -706,7 +706,7 @@ namespace Pitcher
       /// the specified parameter name is a positive number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="mustBeMoreThan">
       /// The value must be more than this
@@ -724,7 +724,7 @@ namespace Pitcher
       /// the specified parameter name is a positive number
       /// </summary>
       /// <param name="value">
-      /// The value of the parameter The value
+      /// The value of the parameter
       /// </param>
       /// <param name="mustBeMoreThan">
       /// The value must be more than this
