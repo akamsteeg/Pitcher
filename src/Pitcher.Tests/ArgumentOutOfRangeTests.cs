@@ -92,6 +92,18 @@ namespace Pitcher.Tests
     }
 
     [Fact]
+    public void WhenNegativeNumber_Int_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenNegativeNumber(1, "TEST");
+    }
+
+    [Fact]
+    public void WhenNegativeNumber_Int_WithMessage_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenNegativeNumber(1, "TEST", "message");
+    }
+
+    [Fact]
     public void WhenNegativeNumber_Double_ConditionTrue_Throws()
     {
       Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenNegativeNumber(-1D, "TEST"));
@@ -103,6 +115,17 @@ namespace Pitcher.Tests
       Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenNegativeNumber(-1D, "TEST", "message"));
     }
 
+    [Fact]
+    public void WhenNegativeNumber_Double_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenNegativeNumber(1D, "TEST");
+    }
+
+    [Fact]
+    public void WhenNegativeNumber_Double_WithMessage_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenNegativeNumber(1D, "TEST", "message");
+    }
 
     [Fact]
     public void WhenNegativeNumber_Float_ConditionTrue_Throws()
@@ -117,6 +140,18 @@ namespace Pitcher.Tests
     }
 
     [Fact]
+    public void WhenNegativeNumber_Float_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenNegativeNumber(1f, "TEST");
+    }
+
+    [Fact]
+    public void WhenNegativeNumber_Float_WithMessage_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenNegativeNumber(1f, "TEST", "message");
+    }
+
+    [Fact]
     public void WhenNegativeNumber_Decimal_ConditionTrue_Throws()
     {
       Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenNegativeNumber(-1m, "TEST"));
@@ -126,6 +161,18 @@ namespace Pitcher.Tests
     public void WhenNegativeNumber_Decima_WithMessage_ConditionTrue_Throws()
     {
       Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenNegativeNumber(-1m, "TEST", "message"));
+    }
+
+    [Fact]
+    public void WhenNegativeNumber_Decimal_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenNegativeNumber(1m, "TEST");
+    }
+
+    [Fact]
+    public void WhenNegativeNumber_Decimal_WithMessage_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenNegativeNumber(1m, "TEST", "message");
     }
 
     #endregion
@@ -145,6 +192,18 @@ namespace Pitcher.Tests
     }
 
     [Fact]
+    public void WhenPositiveNumber_Int_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenPositiveNumber(-1, "TEST");
+    }
+
+    [Fact]
+    public void WhenPositiveNumber_Int_WithMessage_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenPositiveNumber(-1, "TEST", "message");
+    }
+
+    [Fact]
     public void WhenPositiveNumber_Double_ConditionTrue_Throws()
     {
       Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(1D, "TEST"));
@@ -154,6 +213,18 @@ namespace Pitcher.Tests
     public void WhenPositiveNumber_Double_WithMessage_ConditionTrue_Throws()
     {
       Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(1D, "TEST", "message"));
+    }
+
+    [Fact]
+    public void WhenPositiveNumber_Double_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenPositiveNumber(-1D, "TEST");
+    }
+
+    [Fact]
+    public void WhenPositiveNumber_Double_WithMessage_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenPositiveNumber(-1D, "TEST", "message");
     }
 
 
@@ -170,6 +241,18 @@ namespace Pitcher.Tests
     }
 
     [Fact]
+    public void WhenPositiveNumber_Float_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenPositiveNumber(-1f, "TEST");
+    }
+
+    [Fact]
+    public void WhenPositiveNumber_Float_WithMessage_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenPositiveNumber(-1f, "TEST", "message");
+    }
+
+    [Fact]
     public void WhenPositiveNumber_Decimal_ConditionTrue_Throws()
     {
       Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(1m, "TEST"));
@@ -179,6 +262,74 @@ namespace Pitcher.Tests
     public void WhenPositiveNumber_Decimal_WithMessage_ConditionTrue_Throws()
     {
       Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(1m, "TEST", "message"));
+    }
+
+    [Fact]
+    public void WhenPositiveNumber_Decimal_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenPositiveNumber(-1m, "TEST");
+    }
+
+    [Fact]
+    public void WhenPositiveNumber_Decimal_WithMessage_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenPositiveNumber(-1m, "TEST", "message");
+    }
+
+    #endregion
+
+    #region #region Throw.ArgumentOutOfRange.WhenMoreThan
+
+    [Fact]
+    public void WhenMoreThan_ConditionTrue_Throws()
+    {
+      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenMoreThan(1, 0, "TEST"));
+    }
+
+    [Fact]
+    public void WhenMoreThan_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenMoreThan(0, 1, "TEST");
+    }
+
+    [Fact]
+    public void WhenMoreThan_WithMessage_ConditionTrue_Throws()
+    {
+      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenMoreThan(1, 0, "TEST", "message"));
+    }
+
+    [Fact]
+    public void WhenMoreThan_WithMessage_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenMoreThan(0, 1, "TEST", "message");
+    }
+
+    #endregion
+
+    #region #region Throw.ArgumentOutOfRange.WhenLessThan
+
+    [Fact]
+    public void WhenLessThan_ConditionTrue_Throws()
+    {
+      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenLessThan(0, 1, "TEST"));
+    }
+
+    [Fact]
+    public void WhenLessThan_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenLessThan(1, 0, "TEST");
+    }
+
+    [Fact]
+    public void WhenLessThan_WithMessage_ConditionTrue_Throws()
+    {
+      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenLessThan(0, 1, "TEST", "message"));
+    }
+
+    [Fact]
+    public void WhenLessThan_WithMessage_ConditionFalse_DoesNotThrow()
+    {
+      Throw.ArgumentOutOfRange.WhenLessThan(1, 0, "TEST", "message");
     }
 
     #endregion
