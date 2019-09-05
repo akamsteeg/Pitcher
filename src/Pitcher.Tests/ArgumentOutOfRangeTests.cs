@@ -179,16 +179,20 @@ namespace Pitcher.Tests
 
     #region Throw.ArgumentOutOfRange.WhenPostiveNumber
 
-    [Fact]
-    public void WhenPositiveNumbere_Int_ConditionTrue_Throws()
+    [Theory]
+    [InlineData(0)]
+    [InlineData(1)]
+    public void WhenPositiveNumbere_Int_ConditionTrue_Throws(int testValue)
     {
-      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(1, "TEST"));
+      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(testValue, "TEST"));
     }
 
-    [Fact]
-    public void WhenPositiveNumber_Int_WithMessage_ConditionTrue_Throws()
+    [Theory]
+    [InlineData(0)]
+    [InlineData(1)]
+    public void WhenPositiveNumber_Int_WithMessage_ConditionTrue_Throws(int testValue)
     {
-      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(1, "TEST", "message"));
+      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(testValue, "TEST", "message"));
     }
 
     [Fact]
@@ -203,16 +207,20 @@ namespace Pitcher.Tests
       Throw.ArgumentOutOfRange.WhenPositiveNumber(-1, "TEST", "message");
     }
 
-    [Fact]
-    public void WhenPositiveNumber_Double_ConditionTrue_Throws()
+    [Theory]
+    [InlineData(0D)]
+    [InlineData(1D)]
+    public void WhenPositiveNumber_Double_ConditionTrue_Throws(double testValue)
     {
-      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(1D, "TEST"));
+      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(testValue, "TEST"));
     }
 
-    [Fact]
-    public void WhenPositiveNumber_Double_WithMessage_ConditionTrue_Throws()
+    [Theory]
+    [InlineData(0D)]
+    [InlineData(1D)]
+    public void WhenPositiveNumber_Double_WithMessage_ConditionTrue_Throws(double testValue)
     {
-      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(1D, "TEST", "message"));
+      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(testValue, "TEST", "message"));
     }
 
     [Fact]
@@ -228,16 +236,20 @@ namespace Pitcher.Tests
     }
 
 
-    [Fact]
-    public void WhenPositiveNumber_Float_ConditionTrue_Throws()
+    [Theory]
+    [InlineData(0f)]
+    [InlineData(1f)]
+    public void WhenPositiveNumber_Float_ConditionTrue_Throws(float testValue)
     {
-      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(1f, "TEST"));
+      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(testValue, "TEST"));
     }
 
-    [Fact]
-    public void WhenPositiveNumber_Float_WithMessage_ConditionTrue_Throws()
+    [Theory]
+    [InlineData(0f)]
+    [InlineData(1f)]
+    public void WhenPositiveNumber_Float_WithMessage_ConditionTrue_Throws(float testValue)
     {
-      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(1f, "TEST", "message"));
+      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(testValue, "TEST", "message"));
     }
 
     [Fact]
@@ -252,16 +264,20 @@ namespace Pitcher.Tests
       Throw.ArgumentOutOfRange.WhenPositiveNumber(-1f, "TEST", "message");
     }
 
-    [Fact]
-    public void WhenPositiveNumber_Decimal_ConditionTrue_Throws()
+    [Theory]
+    [InlineData(0)]
+    [InlineData(1)]
+    public void WhenPositiveNumber_Decimal_ConditionTrue_Throws(decimal testValue)
     {
-      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(1m, "TEST"));
+      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(testValue, "TEST"));
     }
 
-    [Fact]
-    public void WhenPositiveNumber_Decimal_WithMessage_ConditionTrue_Throws()
+    [Theory]
+    [InlineData(0)]
+    [InlineData(1)]
+    public void WhenPositiveNumber_Decimal_WithMessage_ConditionTrue_Throws(decimal testValue)
     {
-      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(1m, "TEST", "message"));
+      Assert.Throws<ArgumentOutOfRangeException>("TEST", () => Throw.ArgumentOutOfRange.WhenPositiveNumber(testValue, "TEST", "message"));
     }
 
     [Fact]

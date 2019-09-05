@@ -501,7 +501,7 @@ namespace Pitcher
       /// cref="ArgumentOutOfRangeException"/> for
       /// '</param>
       public static void WhenPositiveNumber(int value, string argumentName)
-        => When(value > 0, argumentName);
+        => When(value >= 0, argumentName);
 
       /// <summary>
       /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
@@ -518,7 +518,7 @@ namespace Pitcher
       /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
       /// </param>
       public static void WhenPositiveNumber(int value, string argumentName, string message)
-        => When(value > 0, argumentName, message);
+        => When(value >= 0, argumentName, message);
 
       /// <summary>
       /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
@@ -532,7 +532,7 @@ namespace Pitcher
       /// cref="ArgumentOutOfRangeException"/> for
       /// '</param>
       public static void WhenPositiveNumber(double value, string argumentName)
-        => When(value > 0.0D, argumentName);
+        => When(value >= 0.0D, argumentName);
 
       /// <summary>
       /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
@@ -549,7 +549,7 @@ namespace Pitcher
       /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
       /// </param>
       public static void WhenPositiveNumber(double value, string argumentName, string message)
-        => When(value > 0.0D, argumentName, message);
+        => When(value >= 0.0D, argumentName, message);
 
       /// <summary>
       /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
@@ -563,7 +563,7 @@ namespace Pitcher
       /// cref="ArgumentOutOfRangeException"/> for
       /// '</param>
       public static void WhenPositiveNumber(float value, string argumentName)
-        => When(value > 0.0f, argumentName);
+        => When(value >= 0.0f, argumentName);
 
       /// <summary>
       /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
@@ -580,7 +580,7 @@ namespace Pitcher
       /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
       /// </param>
       public static void WhenPositiveNumber(float value, string argumentName, string message)
-        => When(value > 0.0f, argumentName, message);
+        => When(value >= 0.0f, argumentName, message);
 
       /// <summary>
       /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
@@ -594,7 +594,7 @@ namespace Pitcher
       /// cref="ArgumentOutOfRangeException"/> for
       /// '</param>
       public static void WhenPositiveNumber(decimal value, string argumentName)
-        => When(value > 0.0m, argumentName);
+        => When(value >= 0.0m, argumentName);
 
       /// <summary>
       /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
@@ -611,7 +611,7 @@ namespace Pitcher
       /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
       /// </param>
       public static void WhenPositiveNumber(decimal value, string argumentName, string message)
-        => When(value > 0.0m, argumentName, message);
+        => When(value >= 0.0m, argumentName, message);
 
       /// <summary>
       /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
