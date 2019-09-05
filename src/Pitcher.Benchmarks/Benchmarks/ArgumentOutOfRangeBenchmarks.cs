@@ -45,5 +45,53 @@ namespace Pitcher.Benchmarks.Benchmarks
       {
       }
     }
+
+    [Benchmark]
+    public void ThrowArgumentOutOfRangeWhenNegativeNumber()
+    {
+      try
+      {
+        Throw.ArgumentOutOfRange.WhenNegativeNumber(-1, "foo", "bar");
+      }
+      catch
+      {
+      }
+    }
+
+    [Benchmark]
+    public void ThrowArgumentOutOfRangeWhenPositiveNumber()
+    {
+      try
+      {
+        Throw.ArgumentOutOfRange.WhenNegativeNumber(1, "foo", "bar");
+      }
+      catch
+      {
+      }
+    }
+
+    [Benchmark]
+    public void ThrowArgumentOutOfRangeWhenLessThan()
+    {
+      try
+      {
+        Throw.ArgumentOutOfRange.WhenLessThan(0, 1, "foo", "bar");
+      }
+      catch
+      {
+      }
+    }
+
+    [Benchmark]
+    public void ThrowArgumentOutOfRangeWhenMoreThan()
+    {
+      try
+      {
+        Throw.ArgumentOutOfRange.WhenMoreThan(1, 0, "foo", "bar");
+      }
+      catch
+      {
+      }
+    }
   }
 }
