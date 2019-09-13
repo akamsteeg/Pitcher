@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
 
-    <Version>2.0.0</Version>
+    <Version>2.1.0</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Pitcher is helper library to simplify throwing exceptions and make methods easier to inline by reducing code size.</Description>
@@ -15,6 +15,12 @@
     <PackageTags>exception throw helper</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReleaseNotes>
+      2.1.0:
+      - [Feature] Use "is null" instead of "== null" for null checks (#10)
+      - [Feature] Add Throw.ArgumentOutOfRange.WhenNegativeNumber() to throw an ArgumentOutOfRangeException when a number is less than zero (#11)
+      - [Feature] Add Throw.ArgumentOutOfRange.WhenPositiveNumber() to throw an ArgumentOutOfRangeException when a number is zero or more (#12)
+      - [Feature]] Add Throw.ArgumentOutOfRange.WhenLessThan&lt;T&gt;() where T is IComparable&lt;T&gt; to throw an ArgumentOutOfRangeException when the argument is less than the specified value (#13)
+      - [Feature]] Add Throw.ArgumentOutOfRange.WhenMoreThan&lt;T&gt;() where T is IComparable&lt;T&gt; to throw an ArgumentOutOfRangeException when the argument is more than the specified value (#14)
       2.0.0:
       - [Breaking] Strong-named the assembly (#9)
       - [Breaking] Moved to a single NETSTANDARD2.0 TFM (#5)
