@@ -1,7 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFrameworks>net461;net472;netcoreapp2.0</TargetFrameworks>
+
+    <IsTestProject Condition="'$(OS)' != 'Windows_NT' AND $(TargetFramework.StartsWith('net4'))">False</IsTestProject>
   </PropertyGroup>
   
   <ItemGroup>
@@ -12,6 +14,10 @@
     <PackageReference Include="coverlet.msbuild" Version="2.7.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
