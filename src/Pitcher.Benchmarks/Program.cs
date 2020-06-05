@@ -18,11 +18,14 @@ namespace Pitcher.Benchmarks
     {
       var config = ManualConfig.Create(DefaultConfig.Instance);
 
-      config.Add(BenchmarkDotNet.Diagnosers.MemoryDiagnoser.Default);
+      config
+        .AddDiagnoser(BenchmarkDotNet.Diagnosers.MemoryDiagnoser.Default);
 
-      config.Add(Job.ShortRun.With(CsProjCoreToolchain.NetCoreApp21).AsBaseline());
-      config.Add(Job.ShortRun.With(CsProjCoreToolchain.NetCoreApp31));
-      config.Add(Job.ShortRun.With(CsProjClassicNetToolchain.Net472));
+      config.AddJob(
+        Job.Default.WithToolchain(CsProjCoreToolchain.NetCoreApp31).AsBaseline(),
+        Job.Default.WithToolchain(CsProjCoreToolchain.NetCoreApp21),
+        Job.Default.WithToolchain(CsProjClassicNetToolchain.Net48)
+        );
 
       return config;
     }
