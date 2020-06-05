@@ -45,6 +45,7 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <RepositoryUrl>https://github.com/akamsteeg/Pitcher.git</RepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
     
     <!-- Strong naming -->
     <SignAssembly>true</SignAssembly>
@@ -65,4 +66,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
 </Project>
