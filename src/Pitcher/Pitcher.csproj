@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
 
-    <Version>2.1.0</Version>
+    <Version>2.1.1</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Pitcher is helper library to simplify throwing exceptions and make methods easier to inline by reducing code size.</Description>
@@ -15,6 +15,8 @@
     <PackageTags>exception throw helper</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReleaseNotes>
+      2.1.1:
+      - [Feature] Enabled deterministic builds (#15)
       2.1.0:
       - [Feature] Use "is null" instead of "== null" for null checks (#10)
       - [Feature] Add Throw.ArgumentOutOfRange.WhenNegativeNumber() to throw an ArgumentOutOfRangeException when a number is less than zero (#11)
