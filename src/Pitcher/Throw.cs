@@ -615,7 +615,7 @@ namespace Pitcher
 
       /// <summary>
       /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
-      /// the specified parameter name is a positive number
+      /// the specified parameter name is lower than the given value
       /// </summary>
       /// <param name="value">
       /// The value of the parameter
@@ -633,7 +633,7 @@ namespace Pitcher
 
       /// <summary>
       /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
-      /// the specified parameter name is a positive number
+      /// the specified parameter name is lower than the given value
       /// </summary>
       /// <param name="value">
       /// The value of the parameter
@@ -654,31 +654,31 @@ namespace Pitcher
 
       /// <summary>
       /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
-      /// the specified parameter name is a positive number
+      /// the specified parameter name is greater than the given value
       /// </summary>
       /// <param name="value">
       /// The value of the parameter
       /// </param>
-      /// <param name="mustBeMoreThan">
-      /// The value must be more than this
+      /// <param name="mustBeLessThan">
+      /// The value must be less than this
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
       /// cref="ArgumentOutOfRangeException"/> for
       /// </param>
-      public static void WhenMoreThan<T>(T value, T mustBeMoreThan, string argumentName)
+      public static void WhenMoreThan<T>(T value, T mustBeLessThan, string argumentName)
         where T : IComparable<T>
-        => When(value.CompareTo(mustBeMoreThan) > 0, argumentName);
+        => When(value.CompareTo(mustBeLessThan) > 0, argumentName);
 
       /// <summary>
       /// Throw an <see cref="ArgumentOutOfRange"/> when the specified value of
-      /// the specified parameter name is a positive number
+      /// the specified parameter name is greater than the given value
       /// </summary>
       /// <param name="value">
       /// The value of the parameter
       /// </param>
-      /// <param name="mustBeMoreThan">
-      /// The value must be more than this
+      /// <param name="mustBeLessThan">
+      /// The value must be less than this
       /// </param>
       /// <param name="argumentName">
       /// The name of the parameter to throw the <see
@@ -687,9 +687,9 @@ namespace Pitcher
       /// <param name="message">
       /// The message to include in the <see cref="ArgumentOutOfRangeException"/>
       /// </param>
-      public static void WhenMoreThan<T>(T value, T mustBeMoreThan, string argumentName, string message)
+      public static void WhenMoreThan<T>(T value, T mustBeLessThan, string argumentName, string message)
         where T : IComparable<T>
-        => When(value.CompareTo(mustBeMoreThan) > 0, argumentName, message);
+        => When(value.CompareTo(mustBeLessThan) > 0, argumentName, message);
     }
   }
 }
