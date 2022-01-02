@@ -22,8 +22,8 @@ namespace Pitcher.Benchmarks
         .AddDiagnoser(BenchmarkDotNet.Diagnosers.MemoryDiagnoser.Default);
 
       config.AddJob(
-        Job.Default.WithToolchain(CsProjCoreToolchain.NetCoreApp31).AsBaseline(),
-        Job.Default.WithToolchain(CsProjCoreToolchain.NetCoreApp21),
+        Job.Default.WithToolchain(CsProjCoreToolchain.NetCoreApp60).AsBaseline(),
+        Job.Default.WithToolchain(CsProjCoreToolchain.NetCoreApp31)
         Job.Default.WithToolchain(CsProjClassicNetToolchain.Net48)
         );
 
