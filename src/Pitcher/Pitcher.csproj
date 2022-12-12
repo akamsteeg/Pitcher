@@ -3,10 +3,19 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
-
-    <Version>2.1.1</Version>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <LangVersion>10.0</LangVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Nullable>enable</Nullable>
+
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisMode>Recommended</AnalysisMode>
+    <AnalysisLevel>latest</AnalysisLevel>
+
+    <Version>2.1.1</Version>    
+    
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Description>Pitcher is helper library to simplify throwing exceptions and make methods easier to inline by reducing code size.</Description>
     <Copyright>© Alex Kamsteeg</Copyright>
     <Authors>Alex Kamsteeg (https://atlex.nl/)</Authors>
@@ -40,8 +49,6 @@
       - [Fix] Removed expensive null check on arguments in Throw.This() and Throw.When()
     </PackageReleaseNotes>
 
-    <DocumentationFile>docs\Pitcher.xml</DocumentationFile>
-
     <!-- SourceLink -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <RepositoryUrl>https://github.com/akamsteeg/Pitcher.git</RepositoryUrl>
@@ -53,12 +60,6 @@
     <DelaySign>false</DelaySign>
     <AssemblyOriginatorKeyFile>Pitcher.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="docs\**" />
-    <EmbeddedResource Remove="docs\**" />
-    <None Remove="docs\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
